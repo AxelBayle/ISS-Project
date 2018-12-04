@@ -10,18 +10,22 @@ def init_distance():
     pi.write(PIN_TRIG,False)
     time.sleep(0.5)
 
-
 def distance () :
     pi=GPIO.pi()
     # pulse sur la pin echo
-    pi.write(PIN_ECHO,True)
+    pi.write(PIN_TRIG,True)
     time.sleep(0.00001)
-    pi.write(PIN_ECHO,False)
-    start =time.time()
+    pi.write(PIN_TRIG,False)
+    started =time.time()
     stop = -1
-    while ( pi.read(PIN_ECHO)==False):
+    print(pi.read(PIN_ECHO))
+    while ( pi.read(PIN_ECHO)==0):
         start=time.time()
-    while ( pi.read(PIN_ECHO)==True):
+        if (start-started)>15:
+            print("abort")
+            return -1
+    print(pi.read(PIN_ECHO))	
+    while ( pi.read(PIN_ECHO)==1):
         stop=time.time()
     if stop == -1 :
         print ("Erreur")
