@@ -119,3 +119,4 @@ def put_humidite(plante, value):
 
 if __name__=="__main__":
     print("toto")
+    print(get_temperature())
