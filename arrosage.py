@@ -7,7 +7,7 @@ import watreeserver as serv
 
 PLEIN = 5
 VIDE = 25
-
+DELAY= 60 # delai entre deux loop en secondes
 
 def init():
     dist.init_distance()
@@ -32,8 +32,7 @@ def arrosage():
 
         # niveau d'eau
         niveau = remplissage_cuve()
-        # send niveau
-        serv.put_niveau_eau(niveau)
+
 
         if (niveau > 0):
             # recup des besoins
@@ -57,8 +56,12 @@ def arrosage():
                     pompe.gestion_pompe(x, False)
 
             # fin while
-            it = (it + 1) % 24
+        it = (it + 1) % 24
+        # send niveau
+        serv.put_niveau_eau(niveau)
 
+        #pause between loop
+        time.sleep(DELAY)
 
 def lumi_moyenne(lumi_tab):
     sum = 0
