@@ -57,6 +57,8 @@ def arrosage():
 
             # fin while
         it = (it + 1) % 24
+        # niveau d'eau
+        niveau = remplissage_cuve()
         # send niveau
         serv.put_niveau_eau(niveau)
 
