@@ -4,6 +4,8 @@
 # CH 0,1,2 ARE HUMIDITY PINS, CH 3 IS THE LIGHT PIN
 # Moisture sensor calibration 850 = 0rh 400 = 100 rh 
 #################
+from dis import _get_name_info
+
 
 def getADC(channel):
     import time
@@ -39,9 +41,10 @@ def getADC(channel):
 
 
 # Print the ADC values.
-while True:
-    import time
+if __name__ =="__main__":
+    while True:
+        import time
 
-    for i in range(8):
-        print("Value of the channel %s is = %f" % (i, getADC(i)))
-    time.sleep(0.5)
+        for i in range(8):
+            print("Value of the channel %s is = %f" % (i, getADC(i)))
+        time.sleep(0.5)

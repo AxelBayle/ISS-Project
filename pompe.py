@@ -1,8 +1,8 @@
 import pigpio as GPIO
 
-PIN_POMPE_1 = 20
-PIN_POMPE_2 = 21
-PIN_POMPE_3 = 22
+PIN_POMPE_1 = 22
+PIN_POMPE_2 = 27
+PIN_POMPE_3 = 17
 
 pi = GPIO.pi()
 
