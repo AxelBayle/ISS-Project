@@ -15,10 +15,11 @@ def init():
 
 def arrosage_test():
     it = 0
+    lumi_tab = [0] * 24
     while True:
 
         # lumière
-        lumi_tab = [0] * 24
+
         lumi_tab[it] = ADC.getADC(3)
         lumi_mean = lumi_moyenne(lumi_tab)
         # send mean to server
