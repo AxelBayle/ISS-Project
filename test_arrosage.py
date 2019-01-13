@@ -6,14 +6,14 @@ import time
 import watreeserver as serv
 
 
-DELAY= 60 # delai entre deux loop en secondes
+DELAY= 1800 # delai entre deux loop en secondes
 
 def init():
     dist.init_distance()
     pompe.init_pompe()
 
 
-def arrosage():
+def arrosage_test():
     it = 0
     while True:
 
@@ -47,6 +47,14 @@ def arrosage():
             moisture[1] = ADC.getADC(1)
             moisture[2] = ADC.getADC(2)
 
+            #ecriture des humidité dans les fichiers
+            with open("plante1.txt", "a")as f1:
+                f1.write(str(moisture[0]) + "\n")
+            with open("plante2.txt", "a")as f2:
+                f2.write(str(moisture[1]) + "\n")
+            with open("plante3.txt", "a")as f3:
+                f3.write(str(moisture[2]) + "\n")
+
             # comparaison
             for x in range(3):
                 if ((moisture[x] - needs[x]) < -5):
@@ -54,7 +62,6 @@ def arrosage():
                     time.sleep(2)
                     pompe.gestion_pompe(x+1, False)
 
-            # fin while
         it = (it + 1) % 24
         # niveau d'eau
         niveau = dist.remplissage_cuve()
@@ -72,3 +79,5 @@ def lumi_moyenne(lumi_tab):
     return mean
 
 
+if __name__=="__main__":
+    arrosage_test();

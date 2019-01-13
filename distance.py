@@ -3,6 +3,8 @@ import time
 PIN_TRIG = 20
 PIN_ECHO = 21
 
+PLEIN = 5
+VIDE = 25
 def init_distance():
     pi = GPIO.pi()
     pi.set_mode( PIN_ECHO, GPIO.INPUT)
@@ -35,6 +37,12 @@ def distance () :
         distance= delai*34000/2 # vitesse son / 2 fois distance
         print("Distance : ",distance)
         return distance
+
+def remplissage_cuve():
+    profondeur = distance()
+    remplis = ((VIDE - profondeur) / (VIDE - PLEIN)) * 100
+    # remplis = -5 * profondeur + 125
+    return remplis
 
 
 if __name__=='__main__':
