@@ -1,10 +1,10 @@
 import pigpio as GPIO
 import time
-PIN_TRIG = 20
-PIN_ECHO = 21
+PIN_TRIG = 5
+PIN_ECHO = 6
 
 PLEIN = 5
-VIDE = 25
+VIDE = 32
 def init_distance():
     pi = GPIO.pi()
     pi.set_mode( PIN_ECHO, GPIO.INPUT)
@@ -47,4 +47,6 @@ def remplissage_cuve():
 
 if __name__=='__main__':
     init_distance()
-    x=distance()
+    x=remplissage_cuve()
+    print("toto")
+    print(x)
