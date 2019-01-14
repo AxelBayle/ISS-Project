@@ -19,6 +19,7 @@ def distance () :
     time.sleep(0.00001)
     pi.write(PIN_TRIG,False)
     started =time.time()
+    start=started
     stop = -1
     print(pi.read(PIN_ECHO))
     while ( pi.read(PIN_ECHO)==0):

@@ -4,7 +4,7 @@
 # CH 0,1,2 ARE HUMIDITY PINS, CH 3 IS THE LIGHT PIN
 # Moisture sensor calibration 850 = 0rh 400 = 100 rh 
 #################
-from dis import _get_name_info
+#from dis import _get_name_info
 
 
 def getADC(channel):

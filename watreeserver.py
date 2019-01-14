@@ -34,7 +34,7 @@ def put_temperature(x):
     header = {'X-M2M-Origin': 'admin:admin'}
     r = requests.delete(url+"/Temperature/temperature", headers=header)
     print(r.status_code)
-    #on recrée
+    #on recree
     header = {
         "X-M2M-Origin": "admin:admin",
         "Content-type": "application/json;ty=4"
@@ -55,7 +55,7 @@ def put_niveau_eau(x):
     header = {'X-M2M-Origin': 'admin:admin'}
     r = requests.delete(url+"/Niveau_eau/niveau_eau", headers=header)
     print(r.status_code)
-    #on recrée
+    #on recree
     header = {
         "X-M2M-Origin": "admin:admin",
         "Content-type": "application/json;ty=4"
@@ -78,7 +78,7 @@ def put_luminosite(x):
     header = {'X-M2M-Origin': 'admin:admin'}
     r = requests.delete(url+"/Luminosite/luminosite", headers=header)
     print(r.status_code)
-    #on recrée
+    #on recree
     header = {
         "X-M2M-Origin": "admin:admin",
         "Content-type": "application/json;ty=4"
@@ -100,7 +100,7 @@ def put_humidite(plante, value):
     header = {'X-M2M-Origin': 'admin:admin'}
     r = requests.delete(url+"/Plantes_humidite/plante_"+str(plante), headers=header)
     print(r.status_code)
-    #on recrée
+    #on recree
     header = {
         "X-M2M-Origin": "admin:admin",
         "Content-type": "application/json;ty=4"
