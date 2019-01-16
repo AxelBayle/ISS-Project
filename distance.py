@@ -42,7 +42,6 @@ def distance () :
 def remplissage_cuve():
     profondeur = distance()
     remplis = ((VIDE - profondeur) / (VIDE - PLEIN)) * 100
-    # remplis = -5 * profondeur + 125
     return remplis
 
 

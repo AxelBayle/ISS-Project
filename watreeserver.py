@@ -9,24 +9,28 @@ def get_humidite(x):
     header = {'X-M2M-Origin': 'admin:admin', 'Content-type': 'application/json'}
     r = requests.get(url+"/Plantes_humidite/plante_"+str(x), headers=header)
     print(r.status_code)
+    r.close()
     return (r.json())["m2m:cin"]["con"]
 
 def get_temperature():
     header = {'X-M2M-Origin': 'admin:admin', 'Content-type': 'application/json'}
     r = requests.get(url+"/Temperature/temperature", headers=header)
     print(r.status_code)
+    r.close()
     return (r.json())["m2m:cin"]["con"]
 
 def get_luminosite():
     header = {'X-M2M-Origin': 'admin:admin', 'Content-type': 'application/json'}
     r = requests.get(url+"/Luminosite/luminosite", headers=header)
     print(r.status_code)
+    r.close()
     return (r.json())["m2m:cin"]["con"]
 
 def get_niveau_eau():
     header = {'X-M2M-Origin': 'admin:admin', 'Content-type': 'application/json'}
     r = requests.get(url+"/Niveau_eau/niveau_eau", headers=header)
     print(r.status_code)
+    r.close()
     return (r.json())["m2m:cin"]["con"]
 
 def put_temperature(x):
@@ -49,6 +53,7 @@ def put_temperature(x):
     }
     r = requests.post(url+"/Temperature", data=json.dumps(body), headers=header)
     print(r.status_code)
+    r.close()
 
 def put_niveau_eau(x):
     #on delete
@@ -70,6 +75,7 @@ def put_niveau_eau(x):
     }
     r = requests.post(url+"/Niveau_eau", data=json.dumps(body), headers=header)
     print(r.status_code)
+    r.close()
 
 
 
@@ -93,6 +99,7 @@ def put_luminosite(x):
     }
     r = requests.post(url+"/Luminosite", data=json.dumps(body), headers=header)
     print(r.status_code)
+    r.close()
 
 
 def put_humidite(plante, value):
@@ -115,6 +122,7 @@ def put_humidite(plante, value):
     }
     r = requests.post(url+"/Plantes_humidite", data=json.dumps(body), headers=header)
     print(r.status_code)
+    r.close()
 
 
 if __name__=="__main__":

@@ -5,8 +5,8 @@ import pompe as pompe
 import time
 import watreeserver as serv
 
+DELAY = 3600  # delai entre deux loop en secondes
 
-DELAY= 60 # delai entre deux loop en secondes
 
 def init():
     dist.init_distance()
@@ -33,15 +33,14 @@ def arrosage():
         # niveau d'eau
         niveau = dist.remplissage_cuve()
 
-
         if (niveau > 0):
             # recup des besoins
 
             #  TO DO : request serveur
             needs = [0] * 3
-            needs[0] = serv.get_humidite(1)
-            needs[1] = serv.get_humidite(2)
-            needs[2] = serv.get_humidite(3)
+            needs[0] = float(serv.get_humidite(1))
+            needs[1] = float(serv.get_humidite(2))
+            needs[2] = float(serv.get_humidite(3))
             # recup moisture plante
             moisture = [0] * 3
             moisture[0] = ADC.getADC(0)
@@ -51,9 +50,9 @@ def arrosage():
             # comparaison
             for x in range(3):
                 if ((moisture[x] - needs[x]) < -5):
-                    pompe.gestion_pompe(x+1, True)
+                    pompe.gestion_pompe(x + 1, True)
                     time.sleep(2)
-                    pompe.gestion_pompe(x+1, False)
+                    pompe.gestion_pompe(x + 1, False)
 
             # fin while
         it = (it + 1) % 24
@@ -62,14 +61,13 @@ def arrosage():
         # send niveau
         serv.put_niveau_eau(niveau)
 
-        #pause between loop
+        # pause between loop
         time.sleep(DELAY)
+
 
 def lumi_moyenne(lumi_tab):
     sum = 0
-    for i in lumi_tab.size:
-        sum += lumi_tab[i]
-    mean = sum / lumi_tab.size
+    for i in (lumi_tab):
+        sum += i
+    mean = sum / len(lumi_tab)
     return mean
-
-
