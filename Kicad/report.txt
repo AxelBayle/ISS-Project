@@ -1,0 +1,54 @@
+Info: Vérification du composant de la netliste "MK2:/5834FC19:MountingHole:MountingHole_2.7mm_M2.5".
+
+Info: Vérification du composant de la netliste "U1:/5C1100AB:Package_DIP:DIP-16_W10.16mm_LongPads".
+
+Info: Vérification du composant de la netliste "R6:/5C134B48:Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal".
+
+Info: Vérification du composant de la netliste "R5:/5C130C30:Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal".
+
+Info: Vérification du composant de la netliste "R4:/5C117253:Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal".
+
+Info: Vérification du composant de la netliste "R3:/5C15C02F:Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal".
+
+Info: Vérification du composant de la netliste "R2:/5C1432EC:Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal".
+
+Info: Vérification du composant de la netliste "R1:/5C15BFC7:Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal".
+
+Info: Vérification du composant de la netliste "Q3:/5C134B3A:Package_TO_SOT_THT:TO-39-3".
+
+Info: Vérification du composant de la netliste "Q2:/5C130C22:Package_TO_SOT_THT:TO-39-3".
+
+Info: Vérification du composant de la netliste "Q1:/5C10FFCC:Package_TO_SOT_THT:TO-39-3".
+
+Info: Vérification du composant de la netliste "P1:/59AD464A:Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical".
+
+Info: Vérification du composant de la netliste "MK4:/5834FC4F:MountingHole:MountingHole_2.7mm_M2.5".
+
+Info: Vérification du composant de la netliste "MK3:/5834FBEF:MountingHole:MountingHole_2.7mm_M2.5".
+
+Info: Vérification du composant de la netliste "MK1:/5834FB2E:MountingHole:MountingHole_2.7mm_M2.5".
+
+Info: Vérification du composant de la netliste "J9:/5C134B41:Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical".
+
+Info: Vérification du composant de la netliste "J8:/5C130C29:Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical".
+
+Info: Vérification du composant de la netliste "J7:/5C110352:Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical".
+
+Info: Vérification du composant de la netliste "J6:/5C110502:Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical".
+
+Info: Vérification du composant de la netliste "J5:/5C1BA04B:Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical".
+
+Info: Vérification du composant de la netliste "J4:/5C1C9CE8:Connector:NS-Tech_Grove_1x04_P2mm_Vertical".
+
+Info: Vérification du composant de la netliste "J3:/5C1BC16E:Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical".
+
+Info: Vérification du composant de la netliste "J2:/5C110213:Connector:NS-Tech_Grove_1x04_P2mm_Vertical".
+
+Info: Vérification du composant de la netliste "J1:/5C1102AD:Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical".
+
+Attention: Empreinte du composant "J7": changée: empreinte sur circuit 'Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical ', empreinte dans netliste 'Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical '
+
+Attention: Empreinte du composant "J9": changée: empreinte sur circuit 'Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical ', empreinte dans netliste 'Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical '
+
+Attention: Empreinte du composant "J8": changée: empreinte sur circuit 'Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical ', empreinte dans netliste 'Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical '
+
